@@ -142,9 +142,9 @@ fun main() {
 
     val findColor:Color = Color.GREEN
     when (findColor){
-        Color.RED -> print("Color is Red")
-        Color.BLUE -> print("Color is Blue")
-        Color.GREEN -> print("Color is Green")
+        Color.RED -> println("Color is Red")
+        Color.BLUE -> println("Color is Blue")
+        Color.GREEN -> println("Color is Green")
     }
 
 
@@ -153,9 +153,9 @@ fun main() {
     var timeNow = 7
     var openOffice = 6
     if (timeNow > openOffice) {
-        print("Office already open")
+        println("Office already open")
     } else {
-        print("Office close")
+        println("Office close")
     }
     fun sumStatements() {
         val value1 = 10
@@ -163,16 +163,54 @@ fun main() {
 
         sum(value1, value2)
     }
-
     fun sumStatements(value1: Int, value2: Int) = value1 + value2
 
 
     //Expressions
-    fun sumExpressions():Unit {
-        println(sum(1 , 1 * 4))
+    fun sumExpressions() {
+        sum(1 , 1 * 4)
     }
     fun sumExpressions(value1: Int, value2: Int) = value1 + value2
+    val officeExpressions = if (now > openOffice) "Office already open" else "Office close"
+    print(officeExpressions)
 
+    //When Expressions
+    val value = 7
+    val stringOfValue = when (value) {
+        6 -> {
+            println("Six")
+            "value is 6"
+        }
+        7 -> {
+            println("Seven")
+            "value is 7"
+        }
+        8 -> {
+            println("Eight")
+            "value is 8"
+        }
+        else -> {
+            println("undefined")
+            "value cannot be reached"
+        }
+    }
+    //with is
+    val anyType : Any = 100L
+    when(anyType){
+        is Long -> println("the value has a Long type")
+        is String -> println("the value has a String type")
+        else -> println("undefined")
+    }
+    //with in
+    val valueRanges =  27
+    val ranges = 10..50
+    when(valueRanges){
+        in ranges -> println("value is in the range")
+        !in ranges -> println("value is outside the range")
+    }
+
+
+    println(stringOfValue)
 //    for (i in 1..5) {
 //        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
 //        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
