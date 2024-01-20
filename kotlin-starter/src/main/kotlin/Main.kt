@@ -157,12 +157,21 @@ fun main() {
     } else {
         print("Office close")
     }
+    fun sumStatements() {
+        val value1 = 10
+        val value2 = 10
+
+        sum(value1, value2)
+    }
+
+    fun sumStatements(value1: Int, value2: Int) = value1 + value2
+
 
     //Expressions
-    fun sumFun():Unit {
+    fun sumExpressions():Unit {
         println(sum(1 , 1 * 4))
     }
-    fun sum(value1: Int, value2: Int) = value1 + value2
+    fun sumExpressions(value1: Int, value2: Int) = value1 + value2
 
 //    for (i in 1..5) {
 //        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
