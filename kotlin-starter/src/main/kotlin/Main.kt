@@ -204,13 +204,80 @@ fun main() {
     //with in
     val valueRanges =  27
     val ranges = 10..50
-    when(valueRanges){
+    when(valueRanges) {
         in ranges -> println("value is in the range")
         !in ranges -> println("value is outside the range")
     }
-
-
     println(stringOfValue)
+
+
+    //While dan Do While
+    //While
+    var counter = 1
+    while (counter <= 7) {
+        println("Hello, World!")
+        counter++
+    }
+    //Do While
+    var doCounter = 1
+    do {
+        println(doCounter)
+        doCounter++
+    }while (doCounter <= 7)
+    println()
+
+    //Range
+    //downTo()
+    val tenToOne = 10.downTo(1)
+    tenToOne.forEach {
+        if (7 in tenToOne && it == 7) {
+            println("Value 7 available")
+        }else{
+            println("${it}")
+        }
+    }
+    println()
+    //rangeTo()
+    val rangeIntToInt = 1.rangeTo(10)
+    rangeIntToInt.forEach {
+        print("${it} ")
+    }
+    println()
+    //..
+    val rangeInt = 1..10 step 2
+    rangeInt.forEach {
+        print("${it} ")
+    }
+    println()
+    //step
+    println(rangeInt.step)
+
+    //For Loop
+    val rangesLoop = 1.rangeTo(10) step  3
+    //for loop withIndex()
+    for ((index, value) in rangesLoop.withIndex()){
+        println("value $value with $index")
+    }
+    //forEachIndexed
+    rangesLoop.forEachIndexed{ index, value ->
+        println("for each $value with $index")
+    }
+
+
+    //Break dan Continue Labels
+    //Continue
+    val listOfIntContinue = listOf(1, 2, 3, null, 5, null, 7)
+    for (i in listOfIntContinue) {
+        if (i == null) continue
+        print(i)
+    }
+    //Break
+    val listOfIntBreak = listOf(1, 2, 3, null, 5, null, 7)
+    for (i in listOfIntBreak) {
+        if (i == null) break
+        print(i)
+    }
+
 //    for (i in 1..5) {
 //        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
 //        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
