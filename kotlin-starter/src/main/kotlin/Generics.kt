@@ -1,0 +1,5 @@
+package astu
+
+fun main() {
+
+}
