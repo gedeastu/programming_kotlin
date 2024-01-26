@@ -8,7 +8,7 @@ class User(val name:String,val age:Int){
 data class DataUser(val name:String, val age: Int)
 fun main() {
     val user =  User("Gede Astu", 19)
-    val user2 =  User("Astu", 19)
+    val user2 =  User("astu", 19)
     val user3 =  User("Gede Astu", 19)
     val dataUser = DataUser("Puspitayani",19)
     val dataUser2 = DataUser("Nyoman",19)
