@@ -32,7 +32,7 @@ fun main() {
     //Covariant (Producer)
     val superheroes: Superheroes<String> = Superheroes("Batman")
     val anySuperheroes: Superheroes<Any> = superheroes
-    println(anySuperheroes)
+    println(anySuperheroes.getValue())
     //Contravariant (Consumer)
     val anyConsumer: Consumer<Any> = Consumer("")
     val stringConsumer: Consumer<String> = anyConsumer // Contravariance allows assigning ConsumerBox<Any> to ConsumerBox<String>
@@ -70,9 +70,9 @@ class ListName<T : Number> : List<T>{
 
 //Make Variance
 //Covariant (Producer)
-class Superheroes<out T>(val value: T){
+class Superheroes<out T>(private val name: T){
     fun getValue():T{
-        return value
+        return name
     }
 }
 //Contravariant (Consumer)

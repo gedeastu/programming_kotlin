@@ -274,7 +274,7 @@ val WithoutParameterMessage = {
 }
 //with parameter
 val WithParameterMessage = {
-   message: String -> println(message)
+   value: String -> println(value)
 }
 
 //High Order Function
